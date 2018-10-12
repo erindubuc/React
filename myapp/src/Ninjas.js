@@ -1,10 +1,6 @@
-import React, { Component } from 'react';
-
-class Ninjas extends Component{
-    render(){
-        // console.log(this.props);
-        // destructuring - grabbing variable names
-        const { ninjas } = this.props;
+import React from 'react';
+// function based component passes props in
+const Ninjas = ({ninjas}) => {
         const ninjaList = ninjas.map(ninja => {
             return (
                 <div className="ninja" key={ninja.id}>
@@ -20,6 +16,5 @@ class Ninjas extends Component{
             </div>
             )
         }
-    }
     
     export default Ninjas;
